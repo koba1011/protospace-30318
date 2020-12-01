@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
 
+  #prototypeの詳細ページにてコメントを空で送信(複数回)押した後にブラウザの戻るボタンで戻ろうとするとルーティングエラーが出るのを解決するため、indexも定義しました。
   def index
     @comment = Comment.new
     @prototype = Prototype.find(params[:prototype_id])
